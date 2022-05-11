@@ -1,0 +1,41 @@
+#include<iostream>
+#include<conio.h>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+  cout << "Lotfan Zarayeb Ra Vared Konid.";
+  int a, b, c;
+  cout << "\n\n" << "a=";
+  cin >> a;
+  cout << "\n" << "b=";
+  cin >> b;
+  cout << "\n" << "c=";
+  cin >> c;
+  if (a == 0  b == 0  c == 0)
+    cout << "\n" << "Zarayeb Bayad 0 Nabashad.";
+  else {
+    cout << "\n" << "Moadele Shoma Besoorat Zir Ast:\n\n";
+    cout << a << "*x*x + " << b << "*x + " << c << " = 0\n\n";
+    float delta, x1, x2;
+    delta = (b * b - (4 * a * c));
+    if (delta < 0)
+      cout << "Moadele Rishe Haghighi Nadarad.";
+    else if (delta == 0)
+    {
+      cout << "Moadele Rishe Moza-af Darad.";
+      x1 = (-b / (2 * a));
+      cout << "\n\n" << "x=" << x1;
+    }
+    else {
+      cout << "Moadele 2 Rishe Haghighi Darad.";
+      x1 = ((-b + sqrt(delta)) / (2 * a));
+      x2 = ((-b - sqrt(delta)) / (2 * a));
+      cout << "\n\n" << "x1=" << -x1 << "\t" << "x2=" << -x2;
+    }
+  }
+  cout << "\n\n\n" << "press any key to exit...";
+  getch();
+  return 0;
+}
